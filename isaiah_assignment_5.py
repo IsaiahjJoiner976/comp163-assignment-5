@@ -15,4 +15,15 @@ while current_number > 1:
     else: 
         print(current_number, end=" ")
 print(f"\nSteps: {step_count}")
-print("")
+print()
+
+print("=== Challenge 2: Prime Number Checker ===")
+current_number = int(input("Enter a number: "))
+print(f"Testing divisors from 2 to {current_number - 1}...")
+if current_number > 1:
+    if current_number % 3 != 0:
+        print(f"{current_number} is prime!")
+        print()
+    else:
+        print(f"{current_number} is not prime (divisible by 3)")
+        print()
