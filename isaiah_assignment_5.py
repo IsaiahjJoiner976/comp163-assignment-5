@@ -27,3 +27,23 @@ if current_number > 1:
     else:
         print(f"{current_number} is not prime (divisible by 3)")
         print()
+
+print("=== Challenge 3: Multiplication Table ===")
+print("Multiplication Table:")
+print("      1   2   3   4   5   6   7   8   9  10")
+number = 1
+multiple = 1
+while number <= 10:
+    print(number, end="  ")
+    while multiple < 10:
+        if number > 10:
+            break
+        else:
+            print(number * multiple, end= "   ")
+            multiple += 1
+            if multiple == 10:
+                print(number * multiple)
+                number += 1
+    multiple = 1
+
+
