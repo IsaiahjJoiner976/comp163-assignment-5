@@ -19,22 +19,24 @@ print()
 
 print("=== Challenge 2: Prime Number Checker ===")
 current_number = int(input("Enter a number: "))
+is_prime = True
 print(f"Testing divisors from 2 to {current_number - 1}...")
-if current_number > 1:
-    if current_number % 3 != 0:
-        print(f"{current_number} is prime!")
-        print()
-    else:
-        print(f"{current_number} is not prime (divisible by 3)")
-        print()
+for d in range(2, current_number):
+    if current_number % d == 0:
+        is_prime = False
+        print(f"{current_number} is not prime (divisible by {d})")
+        break
+if is_prime:
+    print(f"{current_number} is prime!")
 
+print("")
 print("=== Challenge 3: Multiplication Table ===")
 print("Multiplication Table:")
 print("      1   2   3   4   5   6   7   8   9  10")
 number = 1
 multiple = 1
 while number <= 10:
-    print(number, end="  ")
+    print(number, end="   ")
     while multiple < 10:
         if number > 10:
             break
